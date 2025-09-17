@@ -1,0 +1,73 @@
+<!doctype html>
+<div id="status" class="status">Status: aguardando</div>
+</header>
+
+
+<section class="upload">
+<label class="file-label">Carregar PDF
+<input id="pdfInput" type="file" accept="application/pdf" />
+</label>
+<div id="loading" class="loading" hidden>Carregando... ✅</div>
+</section>
+
+
+<section class="info">
+<h2>Identificação</h2>
+<div id="procedures" class="group">
+<strong>Procedimentos:</strong>
+<ul id="proceduresList">(nenhum)</ul>
+</div>
+
+
+<div id="persons" class="group">
+<strong>Pessoas Envolvidas (selecione):</strong>
+<div id="personsList">(nenhum)</div>
+</div>
+</section>
+
+
+<section class="reports">
+<h2>Relatórios</h2>
+<button id="analyzeBtn" disabled>Analisar Pendências</button>
+<button id="finalReportBtn" disabled>Relatório Final (≤ 90 linhas)</button>
+</section>
+
+
+<section class="oitivas">
+<h2>Oitivas</h2>
+<label>Tipo de Oitiva
+<select id="oitivaType">
+<option value="declaracao">Declaração</option>
+<option value="depoimento">Depoimento</option>
+<option value="interrogatorio">Interrogatório</option>
+</select>
+</label>
+<label>Qtd. de Perguntas
+<input id="qtdPerguntas" type="number" min="0" value="5" />
+</label>
+<div id="selectedProcedureArea">Procedimento selecionado: <span id="selectedProcedure">(nenhum)</span></div>
+<div class="small">Selecione uma pessoa na lista de Pessoas Envolvidas antes de gerar.</div>
+<button id="generateOitivasBtn" disabled>Gerar Oitivas</button>
+</section>
+
+
+<section class="api-config">
+<button id="configApiBtn">Configurar chave API GEMINI</button>
+</section>
+
+
+<section class="output">
+<h2>Resultado</h2>
+<pre id="outputArea"></pre>
+</section>
+</div>
+
+
+<!-- libs: pdf.js (for text extraction) and tesseract.js (OCR fallback) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.8.162/pdf.min.js"></script>
+<script src="https://unpkg.com/tesseract.js@4.0.2/dist/tesseract.min.js"></script>
+
+
+<script src="popup.js"></script>
+</body>
+</html>

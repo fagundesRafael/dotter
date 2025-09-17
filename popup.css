@@ -1,0 +1,77 @@
+:root {
+  --bg: #0f1724;
+  --card: #0b1a2b;
+  --accent: #06b6d4;
+  --muted: #94a3b8;
+  --text: #e6eef6;
+}
+body {
+  font-family: Inter, system-ui, Arial;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+.container {
+  width: 420px;
+  padding: 12px;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+.status {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.group {
+  margin: 8px 0;
+}
+button {
+  background: var(--accent);
+  border: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: #012;
+  margin-right: 8px;
+  cursor: pointer;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.file-label {
+  display: inline-block;
+  padding: 8px 10px;
+  background: #032;
+  cursor: pointer;
+  border-radius: 8px;
+}
+#outputArea {
+  background: #021;
+  min-height: 120px;
+  padding: 8px;
+  border-radius: 8px;
+  overflow: auto;
+}
+.person-item {
+  display: flex;
+  align-items: center;
+  margin: 4px 0;
+}
+.person-item input {
+  margin-right: 8px;
+}
+.loading {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.small {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 6px;
+}

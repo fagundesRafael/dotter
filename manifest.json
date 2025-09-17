@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "dotter",
+    "description": "Auxilia escrivães: extrai dados de PDFs e usa Gemini para gerar relatórios, oitivas e análise de pendências.",
+    "version": "1.0",
+    "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+    "128": "icons/icon128.png"
+    }
+    },
+    "permissions": [
+    "storage",
+    "scripting",
+    "activeTab"
+    ],
+    "host_permissions": ["https://*/*", "http://*/*"],
+    "background": {
+    "service_worker": "background.js"
+    }
+    }
