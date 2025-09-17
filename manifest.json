@@ -2,16 +2,27 @@
     "manifest_version": 3,
     "name": "dotter",
     "version": "1.0",
-    "description": "Auxiliar atividades de uma Delegacia de Polícia com análise de PDFs e relatórios via Gemini.",
-    "permissions": ["storage"],
+    "description": "Auxilia escrivães de polícia na análise de PDFs e geração de relatórios.",
+    "permissions": [
+      "storage",
+      "activeTab",
+      "scripting"
+    ],
+    "host_permissions": [
+      "https://generativelanguage.googleapis.com/*"
+    ],
     "action": {
-        "default_popup": "popup.html"
-      },
-      "icons": {
-        "16": "icon16.png",
-        "48": "icon48.png",
-        "128": "icon128.png"
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
       }
-      
+    },
+    "icons": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
   }
   
