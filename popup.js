@@ -16,8 +16,8 @@ const qtdPerguntas = document.getElementById('qtdPerguntas');
 const outputArea = document.getElementById('outputArea');
 const configApiBtn = document.getElementById('configApiBtn');
 
-pdfjsLib.GlobalWorkerOptions.workerSrc =
-  'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.8.162/pdf.worker.min.js';
+pdfjsLib.GlobalWorkerOptions.workerSrc = chrome.runtime.getURL("libs/pdfjs/pdf.worker.mjs");
+
 
 // ========================
 // Variáveis globais
