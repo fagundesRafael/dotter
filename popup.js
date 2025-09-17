@@ -1,4 +1,5 @@
-/* global pdfjsLib, Tesseract, chrome */
+/* global Tesseract, chrome */
+const { pdfjsLib } = window;
 
 // ========================
 // Seletores do DOM
