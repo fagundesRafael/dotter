@@ -15,7 +15,6 @@ const oitivaType = document.getElementById('oitivaType');
 const qtdPerguntas = document.getElementById('qtdPerguntas');
 const outputArea = document.getElementById('outputArea');
 const configApiBtn = document.getElementById('configApiBtn');
-const selectedProcedureEl = document.getElementById('selectedProcedure');
 
 pdfjsLib.GlobalWorkerOptions.workerSrc =
   'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.8.162/pdf.worker.min.js';
@@ -25,8 +24,6 @@ pdfjsLib.GlobalWorkerOptions.workerSrc =
 // ========================
 let fileText = '';
 let extractedData = { procedures: [], persons: [] };
-let selectedProcedure = null;
-let selectedPerson = null;
 
 // ========================
 // Função para chamar a API Gemini
@@ -117,7 +114,7 @@ pdfInput.addEventListener('change', async (e) => {
   try {
     fileText = await extractTextFromPDF(file);
 
-    // Simulação: preencher listas básicas (você pode melhorar depois)
+    // Simulação: preencher listas básicas (depois você pode melhorar a extração com IA)
     extractedData.procedures = ["Boletim de Ocorrência 123", "Inquérito Policial 456"];
     extractedData.persons = ["Vítima: João", "Testemunha: Maria", "Suspeito: Carlos"];
 
