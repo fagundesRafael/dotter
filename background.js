@@ -1,5 +1,9 @@
 // Importa a biblioteca PDF.js (certifique-se que o caminho está correto)
-importScripts('lib/pdf.js');
+import * as pdfjsLib from './lib/pdf.mjs';
+
+// Configura o caminho para o "worker" do PDF.js. ESSA LINHA É CRUCIAL.
+// Ela permite que a biblioteca principal encontre e carregue o script do worker.
+pdfjsLib.GlobalWorkerOptions.workerSrc = chrome.runtime.getURL('lib/pdf.worker.mjs');
 
 let pdfTextContent = ''; // Armazena o texto extraído do PDF
 

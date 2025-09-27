@@ -21,8 +21,18 @@
     }
   },
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "type": "module"
   },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "lib/pdf.worker.mjs",
+        "lib/cmaps/*"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
   "icons": {
     "16": "images/icon16.png",
     "48": "images/icon48.png",
