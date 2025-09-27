@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    width: 400px;
+    background-color: #FFFFFF;
+    color: #333;
+}
+
+#app {
+    padding: 15px;
+}
+
+button {
+    background-color: #005A9C;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #00487a;
+}
+
+button:disabled {
+    background-color: #a0a0a0;
+    cursor: not-allowed;
+}
+
+input, select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #F0F4F8;
+    margin: 20px 0;
+}
+
+.section {
+    background-color: #F0F4F8;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+h3 {
+    color: #005A9C;
+    margin-top: 0;
+    border-bottom: 2px solid #005A9C;
+    padding-bottom: 5px;
+}
+
+#status-bar {
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.status-info { background-color: #F0F4F8; color: #333; }
+.status-success { background-color: #28A745; color: #FFFFFF; }
+.status-error { background-color: #DC3545; color: #FFFFFF; }
+.status-loading { background-color: #005A9C; color: #FFFFFF; }
+
+
+.loading-bar-container {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.loading-bar {
+    width: 0%;
+    height: 10px;
+    background-color: #005A9C;
+    border-radius: 5px;
+    transition: width 0.4s ease;
+}
+
+.oitivas-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#oitiva-tipo { width: 40%; }
+#oitiva-qtd { width: 30%; }
+#gerar-oitivas-btn { width: 30%; margin-top: 0; }
+
+.pessoa {
+    padding: 5px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+.menor-idade { background-color: #FFC107; color: #000; }
+.sem-qualificacao { background-color: #FD7E14; color: #fff; }
+
+.output-area {
+    background-color: #FFFFFF;
+    border: 1px solid #F0F4F8;
+    min-height: 100px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
