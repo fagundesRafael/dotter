@@ -99,7 +99,7 @@ async function callGeminiAPI(prompt) {
         throw new Error("Chave API do Gemini não configurada.");
     }
     
-    const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-pro-latest:generateContent?key=${apiKey}`;
+    const API_URL = `https://generativelanguage.googleapis.com/v2/models/gemini-2.5-flash-latest:generateContent?key=${apiKey}`;
 
     const response = await fetch(API_URL, {
         method: 'POST',
